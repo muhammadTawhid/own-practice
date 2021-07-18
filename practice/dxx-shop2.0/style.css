@@ -1,0 +1,19 @@
+.site-slider {
+  background-color: #fceae8;
+  border-radius: 1em;
+  margin-top: 120px;
+}
+.category img {
+  width: 100px;
+}
+
+
+/* practice with JkR korar somoy aikhane (! importent) use korte hoy nai but aikhane kno korte hoitase jni nah__I will find this solution in future inshallah */
+
+.items-card {
+  border: 0 !important;
+}
+.items-footer {
+  border: 0;
+  background-color: white !important;
+}

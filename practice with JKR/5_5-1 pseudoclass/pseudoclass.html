@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        /*------------------------- this all are pseudo class */
+        h1 {
+            color: red;
+        }
+
+        h1:hover {
+            color: black;
+            background-color: goldenrod;
+            font-size: 30px;
+        }
+
+        .simple-effect:hover {
+            color: violet;
+            background-color: yellowgreen;
+        }
+
+        input:focus {
+            color: yellowgreen;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        li:last-child {
+            background-color: black;
+            color: green;
+        }
+
+        li:first-child {
+            background-color: hotpink;
+        }
+
+        li:nth-child(2n) {
+            background-color: coral;
+        }
+
+        li:nth-child(2n+1) {
+            color: white;
+            background-color: darkblue;
+        }
+
+        a:visited {
+            color: rgb(251, 13, 13);
+            font-weight: 700;
+        }
+
+        /*------------------------ pseudo elements starts from here */
+
+        h3::before {
+            content: "Hello ";
+            background-color: chartreuse;
+        }
+
+        h3::after {
+            content: " Bye ";
+            background-color: rgb(33, 121, 70);
+        }
+
+
+
+        body {
+            counter-reset: section;
+        }
+
+        p::before {
+            counter-increment: section;
+            content: "crush "counter(section) ": ";
+        }
+        .container{
+            background-color: rgba(54, 173, 228, 0.664);
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+        }
+        #first{
+            background-color: forestgreen;
+        }
+        #second{
+            background-color: greenyellow;
+            position: fixed;
+            left: 100px;
+        }
+        #third{
+            background-color: hotpink;
+        }
+        h6{
+            font-size: 30px;
+            color: coral !important;
+        }
+        .power{
+            font-size: 30px;
+            color: purple;
+        }
+        #trumb{
+            font-size: 30px;
+            color: rgb(255, 208, 0);
+        }
+    </style>
+</head>
+
+
+<!-- ------------------------------------------------------------------ -->
+
+<body>
+    <!-- -------------------this all are pseudo class -->
+    <h1>pseudoclass</h1>
+    <h1>normal class</h1>
+    <h2 class="simple-effect">vodro class</h2>
+    <input name="email" type="text">
+    <br>
+    <input name="name" type="text">
+    <ul>
+        <li>alia</li>
+        <li>dalia</li>
+        <li>balia</li>
+        <li>jalia</li>
+        <li>kalia</li>
+        <li>falia</li>
+        <li>nalia</li>
+    </ul>
+    <a href="www.google.com">this visited</a>
+    <a href="www.youtube/salmankhan">salman</a>
+
+
+    <!------------------------ pseudo elements starts from here -->
+
+    <h3>pseudo element</h3>
+    <h3>aadflk element</h3>
+    <h3>dfafff element</h3>
+
+    <p>alia</p>
+    <p>dalia</p>
+    <p>balia</p>
+    <p>jalia</p>
+    <p>kalia</p>
+    <p>falia</p>
+    <p>nalia</p>
+
+
+    <h1>5_5-4 module practice</h1>
+
+    <section><h4>learning position</h4></section>
+    <section class="container">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <h6 style="color: blue;" id="trumb" class="power">power er khela</h6>
+    </section>
+</body>
+
+</html>
