@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 2px solid olivedrab;
+            border-radius: 2px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid voluptatem sit
+                    vitae? Quisquam, et id consequuntur, reprehenderit cumque minus, nulla provident laudantium eligendi
+                    tenetur assumenda odit doloremque quia voluptatum aut.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Nam dolore quae similique quasi deleniti quam illo placeat, ad sit tenetur esse
+                    magnam nemo! Assumenda in amet aperiam a nesciunt dolorem aliquid, officia cupiditate optio
+                    molestias mollitia obcaecati hic.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quibusdam sunt laboriosam id explicabo in eius beatae optio! Ea, earum qui
+                    ratione autem facere veritatis voluptas illum consequuntur omnis tempora excepturi! Officia fuga
+                    repellendus eveniet, quis commodi reprehenderit repellat?</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        var author = document.getElementsByClassName("author");
+        for (i = 0; i < author.length; i++) {
+            var element = author[i];
+            // element.innerHTML = "lekhok" + (i);
+            element.innerHTML = "lekhok- " + (i + 1);
+            element.style.backgroundColor = "yellow";
+            element.style.fontSize = "30px";
+            element.style.margin = "10px";
+        }
+    </script>
+</body>
+
+</html>
