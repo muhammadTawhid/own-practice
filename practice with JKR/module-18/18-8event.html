@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event management company</title>
+</head>
+
+<body>
+    <h1 onclick="alert('hi this programmer')">exploring event</h1>
+    <p onclick="console.log('i am console log ')">i'm console log on debbuger click me</p>
+    <button onclick="handleClick()">touch me</button>
+    <button>btn-1</button>
+    <button id="second">btn-2</button>
+    <button id="third">btn-3</button>
+
+    <script>
+        // function handleClick() {
+        //     document.body.style.backgroundColor = 'tomato';
+        // }
+        // const secondBtn = document.getElementById('second');
+        // secondBtn.addEventListener('click', handleClick);
+        // secondBtn.onclick = handleClick;
+
+
+        const thirdBtn = document.getElementById('third');
+        thirdBtn.addEventListener("click", function () { document.body.style.color = "tomato" })
+
+    </script>
+</body>
+
+</html>
+
+<!-- //    function (){
+    //        console.log("second btn clicked");
+    //    }; -->
