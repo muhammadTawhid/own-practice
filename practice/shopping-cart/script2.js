@@ -1,7 +1,8 @@
 //plus btn event handler
-const plusBtn = document.getElementById("plusBtn");
-plusBtn.addEventListener("click", function () {
-  btnCalculation("inputQuantity", 1, "castValue")
+btnActivity("plusBtn", 1);
+// const plusBtn = document.getElementById("plusBtn");
+// plusBtn.addEventListener("click", function () {
+//   btnCalculation("inputQuantity", 1, "castValue")
   // const inputQuantity = document.getElementById("inputQuantity").value;
   // const quantityNumber = parseFloat(inputQuantity);
   // const totalQuantity = quantityNumber + 1;
@@ -12,12 +13,15 @@ plusBtn.addEventListener("click", function () {
   // // const castValueNumber = parseFloat(castValue);
   // const totalItemCost = totalQuantity * 1219;
   // document.getElementById("castValue").innerText = totalItemCost;
-});
+// });
 
 // minus btn event handler
-const minusBtn = document.getElementById("minusBtn");
-minusBtn.addEventListener("click", function () {
-  btnCalculation("inputQuantity", -1, "castValue")
+btnActivity("minusBtn", -1)
+
+// const minusBtn = document.getElementById("minusBtn");
+// minusBtn.addEventListener("click", function () {
+//   btnCalculation("inputQuantity", -1, "castValue")
+
   // const inputQuantity = document.getElementById("inputQuantity").value;
   // const quantityNumber = parseFloat(inputQuantity);
   // const totalQuantity = quantityNumber - 1;
@@ -28,7 +32,14 @@ minusBtn.addEventListener("click", function () {
   // // const castValueNumber = parseFloat(castValue);
   // const totalItemCost = totalQuantity * 1219;
   // document.getElementById("castValue").innerText = totalItemCost;
+// });
+
+function btnActivity(id, quantityNum){
+  const quantityBtn = document.getElementById(id);
+  quantityBtn.addEventListener("click", function () {
+  btnCalculation("inputQuantity", quantityNum, "castValue")
 });
+}
 
 function btnCalculation(id, quantityNum, id2){
   const inputQuantity = document.getElementById(id).value;
