@@ -1,31 +1,35 @@
 //plus btn event handler
+// btnActivity("plusBtn"); // arekta parameter dite hoibo;
+
 const plusBtn = document.getElementById("plusBtn");
 plusBtn.addEventListener("click", function () {
-  const inputQuantity = document.getElementById("inputQuantity").value;
-  const quantityNumber = parseFloat(inputQuantity);
-  // console.log(quantityNumber);
-  const totalQuantity = quantityNumber + 1;
-  document.getElementById("inputQuantity").value = totalQuantity;
-
-  // calculate
-  const castValue = document.getElementById("castValue").innerText;
-  const castValueNumber = parseFloat(castValue);
-  const totalItemCost = totalQuantity * 1219;
-  document.getElementById("castValue").innerText = totalItemCost;
+  btnCalculation("inputQuantity", 1, "castValue")
 });
 
 // minus btn event handler
-const minusBtn = document.getElementById("minusBtn");
-minusBtn.addEventListener("click", function () {
-  const inputQuantity = document.getElementById("inputQuantity").value;
+btnActivity("minusBtn")
+
+// const minusBtn = document.getElementById("minusBtn");
+// minusBtn.addEventListener("click", function () {
+//   btnCalculation("inputQuantity", -1, "castValue")
+// });
+
+function btnActivity(id){
+  const minusBtn = document.getElementById(id);
+  minusBtn.addEventListener("click", function () {
+  btnCalculation("inputQuantity", -1, "castValue")
+});
+}
+
+function btnCalculation(id, quantityNum, id2){
+  const inputQuantity = document.getElementById(id).value;
   const quantityNumber = parseFloat(inputQuantity);
-  // console.log(quantityNumber);
-  const totalQuantity = quantityNumber - 1;
-  document.getElementById("inputQuantity").value = totalQuantity;
+  const totalQuantity = quantityNumber + quantityNum;
+  document.getElementById(id).value = totalQuantity;
 
   // calculate
-  const castValue = document.getElementById("castValue").innerText;
-  const castValueNumber = parseFloat(castValue);
+  // const castValue = document.getElementById(id2).innerText;
+  // const castValueNumber = parseFloat(castValue);
   const totalItemCost = totalQuantity * 1219;
-  document.getElementById("castValue").innerText = totalItemCost;
-});
+  document.getElementById(id2).innerText = totalItemCost;
+}
