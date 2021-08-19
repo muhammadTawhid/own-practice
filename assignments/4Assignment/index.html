@@ -54,19 +54,19 @@
                     <input id="first-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div >
-                    <button id="first-plus" class="plus-minus-btn"> + </button>
-                    <button id="first-minus" class="plus-minus-btn"> - </button>
+                    <button onclick="handlePlusMinus(true, 'first')" class="plus-minus-btn"> + </button>
+                    <button onclick="handlePlusMinus(false, 'first')" class="plus-minus-btn"> - </button>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input  class="inp-style inp-width" type="number" name="" value="0">
+                    <input id="second-input"  class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div>
-                    <button class="plus-minus-btn"> + </button>
-                    <button class="plus-minus-btn"> - </button>
+                    <button onclick="handlePlusMinus(true, 'second')" class="plus-minus-btn"> + </button>
+                    <button onclick="handlePlusMinus(false, 'second')" class="plus-minus-btn"> - </button>
                 </div>
             </div>
             <div class="calculations">
