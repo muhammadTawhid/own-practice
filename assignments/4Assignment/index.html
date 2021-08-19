@@ -11,6 +11,10 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -41,7 +45,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -53,20 +57,26 @@
                     <label for="">First Class ($150)</label>
                     <input id="first-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
-                <div >
-                    <button onclick="handlePlusMinus(true, 'first')" class="plus-minus-btn"> + </button>
-                    <button onclick="handlePlusMinus(false, 'first')" class="plus-minus-btn"> - </button>
+                <div>
+                    <button onclick="handlePlusMinus(true, 'first')" class="plus-minus-btn"><i
+                            class="fas fa-plus"></i></button>
+                    <br>
+                    <button onclick="handlePlusMinus(false, 'first')" class="plus-minus-btn"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
-            
+
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id="second-input"  class="inp-style inp-width" type="number" name="" value="0">
+                    <input id="second-input" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div>
-                    <button onclick="handlePlusMinus(true, 'second')" class="plus-minus-btn"> + </button>
-                    <button onclick="handlePlusMinus(false, 'second')" class="plus-minus-btn"> - </button>
+                    <button onclick="handlePlusMinus(true, 'second')" class="plus-minus-btn"><i
+                            class="fas fa-plus"></i></button>
+                    <br>
+                    <button onclick="handlePlusMinus(false, 'second')" class="plus-minus-btn"><i
+                            class="fas fa-minus"></i> </button>
                 </div>
             </div>
             <div class="calculations">
@@ -75,7 +85,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="subtotal">$500</p>
+                        <p id="subtotal">$00</p>
                     </div>
                 </div>
 
@@ -84,7 +94,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="vat">$00</p>
                     </div>
                 </div>
                 <hr>
@@ -93,19 +103,36 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total">$000</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="successAlert()" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
-    </section>
 
+        <!-- Confirmation Message  -->
+        <section>
+            <div id="confirmation-box">
+                <div class="text-center bg-white p-3">
+                    <h3>Successfully Booked <i class="far fa-check-circle text-success"></i></h3>
+                    <p>Dhaka To New York</p>
+                    <p>First Class Ticket: <span id="first-ticket">0</span></p>
+                    <p>Economy Ticket: <span id="economy-ticket">0</span></p>
+                    <p>Subtotal: <span id="confirmation-subtotal">0</span></p>
+                    <p>Vat: <span id="confirmation-vat">0</span></p>
+                    <p>Total: <span id="confirmation-total">0</span></p>
+                    <button onclick="handleOk()" class="btn-style"><b>OK</b></button>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 
