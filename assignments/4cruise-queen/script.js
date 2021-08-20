@@ -15,6 +15,9 @@ function handlePlusMinus(isIncrease, product){
 function calculateTotal(){
     const firstQuantity = getQuantity("first");
     const secondQuantity = getQuantity("second");
+    
+    document.getElementById("confirmation-first").innerText = firstQuantity;
+    document.getElementById("confirmation-economy").innerText = secondQuantity;
 
     const subtotal = (firstQuantity * 150) + (secondQuantity * 100);
     document.getElementById("subtotal").innerText = "$" + subtotal;
@@ -22,7 +25,6 @@ function calculateTotal(){
 
     const vat = Math.round(subtotal * 0.1);
     document.getElementById("vat").innerText = vat;
-    document.getElementById("confirmation-vat").innerText = vat;
 
     const total = subtotal + vat;
     document.getElementById("total").innerText = total;
@@ -34,4 +36,12 @@ function getQuantity(product){
     const inputValue = document.getElementById(product + "-input").value;
     const inputValueNumber = parseInt(inputValue);
     return inputValueNumber;
+}
+
+function openDialogBox(){
+    document.getElementById("confirmation-box").style.display = "block";
+}
+
+function closeDialogBox(){
+    document.getElementById("confirmation-box").style.display = "none";
 }

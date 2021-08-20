@@ -108,12 +108,17 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="openDialogBox()" class="btn-style">Book Now</button>
         </div>
         <section>
             <div id="confirmation-box">
-                <div class="text-center">
-                    
+                <div class="text-center bg-white p-2">
+                    <h3>Ticket Booked Successfully</h3>
+                    <p>First Class Ticket: <span id="confirmation-first">0</span></p>
+                    <p>Economy Ticket: <span id="confirmation-economy">0</span></p>
+                    <p>Subtotal: <span id="confirmation-subtotal">0</span></p>
+                    <p>Total with VAT: <span id="confirmation-total">0</span></p>
+                    <button onclick="closeDialogBox()" class="btn-style">OK</button>
                 </div>
             </div>
         </section>
