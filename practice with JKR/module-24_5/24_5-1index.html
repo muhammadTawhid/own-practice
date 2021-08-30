@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="activity"> </h1>
+    <h3>Learn form: <a id="explore_link" href="">visit link</a></h3>
+
+    <script>
+        function doSomething() {
+            fetch("http://www.boredapi.com/api/activity/")
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    document.getElementById("activity").innerText = data.activity;
+                    // document.getElementById("explore_link").innerText = data.link;
+                })
+        }
+
+        setInterval(() => {
+            doSomething();
+        }, 3000);
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- own practice -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="activity">d</h1>
+    <h3>do from this <a href="">link</a></h3>
+
+    <script>
+        function doActivity() {
+            fetch("http://www.boredapi.com/api/activity/")
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    document.getElementById("activity").innerText = data.activity;
+                })
+        }
+
+        setInterval(() => {
+            doActivity();
+        }, 3000);
+    </script>
+</body>
+
+</html>
