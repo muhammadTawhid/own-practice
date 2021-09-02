@@ -1,0 +1,19 @@
+#countries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.country {
+  border: 1px solid gray;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 300px;
+}
+.countryName {
+  color: indianred;
+  font-weight: 600;
+  font-size: 30px;
+}
+#countryDetail > img {
+  width: 200px;
+}
