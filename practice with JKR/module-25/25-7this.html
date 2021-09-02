@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> knowing this keyword</h1>
+    <script>
+        const myObject = {
+            name: "kuddus ali",
+            getName: function(){
+                console.log(this);
+                return "Mr" + this.name;
+            }
+        }
+        myObject.getName();
+
+        const myObject2 ={
+            name: "arman ali"
+        }
+        myObject2.getName = myObject.getName;
+        myObject2.getName();
+    </script>
+</body>
+</html>
