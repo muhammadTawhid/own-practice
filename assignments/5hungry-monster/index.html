@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hungry monster</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+  <section class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/capture.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav  m-lg-auto">
+            <a class="nav-link active me-5 me-5" aria-current="page" href="#">Home</a>
+            <a class="nav-link me-5" href="#">Features</a>
+            <a class="nav-link me-5" href="#">Pricing</a>
+            <a class="nav-link me-5" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <form class="col-md-6 m-auto py-5">
+      <div class="input-group mb-3">
+        <input id="nameInput" type="text" class="form-control" placeholder="Enter a name of your meal...">
+        <div class="input-group-append">
+          <button onclick="searchName()" type="button" class="btn btn-danger">Search</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <section>
+    <div id="mealDetails" class="container">
+
+    </div>
+    <div id="allMeals" class="container">
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
