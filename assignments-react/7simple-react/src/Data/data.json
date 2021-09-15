@@ -1,0 +1,101 @@
+// api for this data
+// https://mocki.io/v1/69470ea4-7b44-47b3-9961-91c42e1351ba  
+
+[
+    {"Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303157.jpg",
+    "Name": " Shakib Al Hasan",
+    "Born": "March 24, 1987,Jessore",
+    "CurrentAge": "33 years",
+    "PlayingRole": " Allrounder",
+    "BattingStyle": "Left-hand bat",
+    "Cost": 1600
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303166.jpg",
+    "Name": "Tamim Iqbal Khan",
+    "Born": "March 20, 1989, Chittagong",
+    "CurrentAge": "31 years",
+    "PlayingRole": "Opening batsman",
+    "BattingStyle": "Left-hand bat",
+    "Cost": 1000
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/302900/302995.jpg",
+    "Name": "Liton Kumar Das",
+    "Born": "October 13, 1994, Dinajpur",
+    "CurrentAge": "26 years",
+    "PlayingRole": " Wicketkeeper batsman",
+    "BattingStyle": "Right-hand bat",
+    "Cost": 1100
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303000/303000.jpg",
+    "Name": "Mehidy Hasan Miraz",
+    "Born": "October 25, 1997, Khulna",
+    "CurrentAge": "23 years ",
+    "PlayingRole": "Allrounder",
+    "BattingStyle": "Right-hand bat",
+    "Cost": 1100
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303146.jpg",
+    "Name": "Mominul Haque",
+    "Born": "September 29, 1991, Cox's Bazar",
+    "CurrentAge": "29 years ",
+    "PlayingRole": "Middle-order batsman",
+    "BattingStyle": "Left-hand bat",
+    "Cost": 800
+  }, {
+    "Img" :"http://p.imgci.com/db/PICTURES/CMS/302900/302999.jpg",
+    "Name": "  Mashrafe Bin Mortaza",
+    "Born": "October 5, 1983, Jessore ",
+    "CurrentAge": "37 years",
+    "PlayingRole": " Bowler",
+    "BattingStyle": "Right-hand bat",
+    "Cost": 1200
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303169.jpg",
+    "Name": " Taskin Ahmed",
+    "Born": " April 3, 1995, Dhaka",
+    "CurrentAge": " 25 years",
+    "PlayingRole": " Bowler",
+    "BattingStyle": "Left-hand bat",
+    "Cost": 900
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303160.jpg",
+    "Name": "Soumya Sarkar",
+    "Born": " February 25, 1993, Satkhira",
+    "CurrentAge": "28 years",
+    "PlayingRole": "Middle-order batsman",
+    "BattingStyle": " Left-hand bat",
+    "Cost": 830
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303148.jpg",
+    "Name": "Mohammad Mushfiqur Rahim",
+    "Born": " May 9, 1987, Bogra",
+    "CurrentAge": "33 years",
+    "PlayingRole": "Wicketkeeper batsman",
+    "BattingStyle": "Right-hand bat",
+    "Cost": 1300
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303155.jpg",
+    "Name": " Shadman Islam Anik",
+    "Born": "May 18, 1995, Dhaka",
+    "CurrentAge": "25 years ",
+    "PlayingRole": "Opening batsman",
+    "BattingStyle": " Left-hand bat",
+    "Cost": 950
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/263500/263581.jpg",
+    "Name": "Mohammad Mahmudullah",
+    "Born": "February 4, 1986, Mymensingh",
+    "CurrentAge": " 35 years ",
+    "PlayingRole": "Allrounder",
+    "BattingStyle": " Right-hand bat",
+    "Cost": 1300
+  }, {
+    "Img" :"https://p.imgci.com/db/PICTURES/CMS/303100/303164.jpg",
+    "Name": "Taijul Islam",
+    "Born": "February 7, 1992, Natore",
+    "CurrentAge": "29 years",
+    "PlayingRole": " Bowler",
+    "BattingStyle": "Left-hand bat",
+    "Cost": 800
+  }
+]
