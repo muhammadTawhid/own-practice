@@ -14,8 +14,7 @@ const FireAuth = () => {
         email: "",
         img: "",
     })
-    console.log(user)
-
+    
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
     const handleSignIn = () =>{
@@ -56,6 +55,8 @@ const FireAuth = () => {
 
     return (
         <div>
+            <p>__________________________</p>
+            <h1>module 41</h1>
             {
                 user.isSignIn ? <button onClick={handleSignOut}>Sign Out</button> : <button onClick={handleSignIn}>google sign in</button>
             }
