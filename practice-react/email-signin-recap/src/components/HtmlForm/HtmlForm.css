@@ -1,8 +1,8 @@
-body{
+/* body{
     color: rgb(255, 255, 255);
     background: linear-gradient(#141e30, #243b55);
 
-}
+} */
 
 .login-box2{
     position: absolute;
@@ -21,7 +21,6 @@ body{
 .err-text{
     text-align: right;
     color: red;
-    /* display:none; */
 }
 
 /* .login-box2 .user-box2{

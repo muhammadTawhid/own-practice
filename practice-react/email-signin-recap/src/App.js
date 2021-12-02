@@ -7,9 +7,9 @@ import HookForm from './components/React-hook-form-practice/HookForm';
 function App() {
   return (
     <div className="">
-     <HtmlForm/>
+     {/* <HtmlForm/> */}
      <br />
-     {/* <PracticeForm/> */}
+     <PracticeForm/>
      <br/>
      {/* <Demo/> */}
      <br/>

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
 import './HtmlForm.css';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import React, {useState} from 'react';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebase.config.js'
 import { updateProfile } from "firebase/auth";
@@ -12,20 +12,18 @@ const HtmlForm = () => {
         emailValid: true,
         passValid: true
     });
-    console.log(inputValid.emailValid, "pass", inputValid.passValid);
     const [user, setUser] = useState({
         isSignedIn: false,
         name: "",
         email: "",
         password: "",
         error: false,
-        success: false,
+        signUpSuccess: false,
+        signInSuccess: false,
     });
-    console.log(user);
 
     const handleBlur = (e) =>{
         let isFormValid;
-        console.log(e.target.name, e.target.value, "dka");
         if(e.target.name === "name"){
             isFormValid = true;
         }
@@ -52,14 +50,12 @@ const HtmlForm = () => {
         if(isFormValid){
             const newUserInfo = {...user};
             newUserInfo[e.target.name] = e.target.value;
-            console.log(e.target.name, e.target.value, "dka");
             setUser(newUserInfo);
         }
     }
 
-    // submit email, password to firebase
-    const handleSubmit = (e) => {
-        console.log(user.email, user.password);
+    // sign up with email, password & name
+    const handleSignUp = (e) => {
         if(user.email && user.password){
             initializeApp(firebaseConfig);
 
@@ -67,41 +63,55 @@ const HtmlForm = () => {
             createUserWithEmailAndPassword(auth, user.email, user.password, user.name)
             .then((userCredential) => {
                 handleUpdateUserInfo(user.name)
-                console.log("user",userCredential.user);
-                const userSuccess = {...user}
-                console.log(userSuccess,"fuck")
-                userSuccess.success = true;
-                userSuccess.error = false;
-                setUser(userSuccess);
+                const userSignUpSuccess = {...user}
+                userSignUpSuccess.signUpSuccess = true;
+                userSignUpSuccess.signInSuccess = false;
+                userSignUpSuccess.error = false;
+                setUser(userSignUpSuccess);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, "errorMessage", errorMessage);
                 const userError = {...user};
-                console.log(userError,"user");
                 userError.error = true;
-                userError.success = false;
+                userError.signUpSuccess = false;
+                userError.signInSuccess = false;
                 setUser(userError);
             });
         }
         e.preventDefault()
     }
 
-    // update user info
-    const handleUpdateUserInfo = name =>{
-        console.log(name, "check name")
+    // update user name & others info
+    const handleUpdateUserInfo = name => {
         const auth = getAuth();
         updateProfile(auth.currentUser, {
         displayName: name, 
         photoURL: "https://media.istockphoto.com/photos/put-more-in-get-more-out-picture-id1291318636?b=1&k=20&m=1291318636&s=170667a&w=0&h=UvVIk7wwkN3X9OFm8gBlWWviV5vAjfrq2ejYP30JmnA="
         }).then(() => {
-        // Profile updated!
-        // ...
+
         }).catch((error) => {
-        // An error occurred
-        // ...
+
         });
+    }
+
+    // sign in with email & password
+    const handleSignIn = (e) =>{
+        if(user.email && user.password){
+            initializeApp(firebaseConfig);
+            const auth = getAuth();
+        signInWithEmailAndPassword(auth, user.email, user.password)
+        .then((userCredential) => {
+            const userSignInSuccess = {...user};
+            userSignInSuccess.signInSuccess = true;
+            userSignInSuccess.signUpSuccess = false;
+            userSignInSuccess.error = false;
+            setUser(userSignInSuccess);
+            // const user = userCredential.user;
+        })
+        .catch((error) => {
+
+        });
+        }
+        e.preventDefault()
     }
     return (
        <div>
@@ -123,11 +133,12 @@ const HtmlForm = () => {
                         {inputValid.passValid === true ? "" : <small className="err-text">Password must have at least 8 characters with number</small>}
                     </div>
                     <input onClick={() => setNewUser(!newUser)} type="checkbox" />Sign Up
-                    <input onClick={handleSubmit} className="submit-input" type="submit" value="submit" />
+                    {newUser ? <input onClick={handleSignUp} className="submit-input" type="submit" value="Sign Up" />
+                    : <input onClick={handleSignIn} className="submit-input" type="submit" value="Sign In" />}
                     <br/>
                     {user.error && <small className="err-text"> This email already in use</small>}
-                    {user.success && <small style={{color:"green"}}>User Created Successfully</small>}
-                    {/* <h4 className="or-option">________________or________________</h4> */}
+                    {user.signUpSuccess && <small style={{color:"green"}}>User Created Successfully</small>}
+                    {user.signInSuccess && <small style={{color:"green"}}>User Sign In Successfully</small>}
                 </form>
                     <h4 className="or-option"><span className="or-style">Or</span></h4>
                     <button className="signin-btn">Sign in with google</button>
