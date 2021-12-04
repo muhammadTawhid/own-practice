@@ -9,11 +9,11 @@ function App() {
     <div className="">
      {/* <HtmlForm/> */}
      <br />
-     <PracticeForm/>
+     {/* <PracticeForm/> */}
      <br/>
      {/* <Demo/> */}
      <br/>
-     {/* <HookForm/> */}
+     <HookForm/>
     </div>
   );
 }
