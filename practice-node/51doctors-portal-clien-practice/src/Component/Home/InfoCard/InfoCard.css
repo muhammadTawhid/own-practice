@@ -1,0 +1,15 @@
+.info-card{
+    width: 300px;
+    height: 100px;
+    padding: 30px;
+    color: white;
+}
+.card-primary{
+    background-color: #1CC7C1;
+}
+.card-dark{
+    background-color: #3A4256;
+}
+.card-icon{
+    font-size: 40px;
+}
