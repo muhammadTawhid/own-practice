@@ -7,9 +7,9 @@ import BusinessInfo from '../BusinessInfo/BusinessInfo';
 const Header = () => {
     return (
         <div className="header-container">
-            <HeaderNavbar/>
-            <HeaderMain/>
-            <BusinessInfo/>
+            <HeaderNavbar />
+            <HeaderMain />
+            <BusinessInfo />
         </div>
     );
 };

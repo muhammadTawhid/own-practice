@@ -22,12 +22,12 @@ const serviceData = [
 const Service = () => {
     return (
         <div className="text-center">
-            <h5 style={{color:"#1CC7C1"}}><strong>OUR SERVICE</strong></h5>
+            <h5 style={{ color: "#1CC7C1" }}><strong>OUR SERVICE</strong></h5>
             <h1>Service We Provide</h1>
             <div className="d-flex justify-content-center">
                 <div className="row mt-5 pt-5 w-75">
                     {
-                        serviceData.map(data => <ServiceCard data={data}/>)
+                        serviceData.map(data => <ServiceCard data={data} />)
                     }
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { faClock, faMapMarkerAlt, faPhone   } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import InfoCard from '../InfoCard/InfoCard';
 
 const infosData = [
@@ -29,7 +29,7 @@ const BusinessInfo = () => {
         <div className="d-flex justify-content-around">
             <div className="row w-75 d-flex justify-content-around">
                 {
-                    infosData.map(data => <InfoCard data={data}/>)
+                    infosData.map(data => <InfoCard data={data} />)
                 }
             </div>
         </div>
