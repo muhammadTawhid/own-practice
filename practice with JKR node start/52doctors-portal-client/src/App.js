@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Appointment from './Component/Appointment/Appointment/Appointment';
 import Login from './Component/Login/Login/Login';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
+import AllPatients from './Component/AllPatients/AllPatients/AllPatients';
 
 export const UserContext = createContext();
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard/appointments" element={<Dashboard />} />
+          <Route path="/dashboard/allPatients" element={<AllPatients />} />
         </Routes>
     </BrowserRouter>
   </UserContext.Provider>
