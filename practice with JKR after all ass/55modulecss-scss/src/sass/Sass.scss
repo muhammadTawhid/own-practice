@@ -1,0 +1,26 @@
+$div-border: #c6538c;
+$div-text-color: #1eeef9d8;
+
+.first-box {
+    margin: 10px;
+    border: 1px solid $div-border;
+    color: $div-text-color;
+}
+
+.second-box {
+    margin: 10px;
+    border: 1px solid $div-border;
+    color: peru;
+}
+
+.third-box {
+    margin: 10px;
+    border: 1px solid $div-border;
+    color: $div-text-color;
+}
+
+.last-box {
+    margin: 10px;
+    border: 1px solid $div-border;
+    color: peru;
+}
