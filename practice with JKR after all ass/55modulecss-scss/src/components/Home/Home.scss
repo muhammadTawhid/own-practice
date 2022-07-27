@@ -1,0 +1,28 @@
+@import '../../styles/font.scss';
+@import '../../styles/color.scss';
+
+.home-container {
+    font-size: $primary-font-size;
+    background-color: $div-text-color;
+}
+
+.container{
+    background-color: hotpink;
+    margin-bottom: 3em;
+
+    h2{
+        border: 1px solid $div-border;
+    }
+
+    button{
+        background-color: cadetblue;
+        cursor: pointer;
+        color: white;
+        font-size: $small-font-size;
+        padding: 15px 30px;
+
+        &:hover{
+            background-color: $div-text-color;
+        }
+    }
+}

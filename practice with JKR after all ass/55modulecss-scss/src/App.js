@@ -4,6 +4,7 @@ import Header1 from './styledComponent/Header1';
 import Friends from './components/Friends/Friends';
 import Footer from './components/Footer/Footer';
 import Sass from './sass/Sass';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Footer/>
       <Header1/>
       <Sass/>
+      <Home/>
     </div>
   );
 }
